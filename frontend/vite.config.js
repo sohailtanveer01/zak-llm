@@ -5,6 +5,7 @@ import react from "@vitejs/plugin-react"
 import dns from "dns"
 import { visualizer } from "rollup-plugin-visualizer"
 
+
 dns.setDefaultResultOrder("verbatim")
 
 // https://vitejs.dev/config/

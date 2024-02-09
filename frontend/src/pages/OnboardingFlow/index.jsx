@@ -7,6 +7,9 @@ export default function OnboardingFlow() {
   const StepPage = OnboardingSteps[step || "home"];
   if (step === "home" || !step) return <StepPage />;
 
+
+  
+
   return (
     <OnboardingLayout>
       {(setHeader, setBackBtn, setForwardBtn) => (

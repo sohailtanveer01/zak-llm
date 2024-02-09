@@ -3,24 +3,35 @@ import LGroupImg from "./l_group.png";
 import RGroupImg from "./r_group.png";
 import AnythingLLMLogo from "@/media/logo/anything-llm.png";
 import { useNavigate } from "react-router-dom";
+import ButtonAccount from "@/components/ButtonAccount";
 
 export default function OnboardingHome() {
   const navigate = useNavigate();
   return (
     <>
+
       <div className="relative w-screen h-screen flex overflow-hidden bg-[#2C2F35] md:bg-main-gradient">
+
         <div
           className="hidden md:block fixed bottom-10 left-10 w-[320px] h-[320px] bg-no-repeat bg-contain"
           style={{ backgroundImage: `url(${LGroupImg})` }}
         ></div>
+
 
         <div
           className="hidden md:block fixed top-10 right-10 w-[320px] h-[320px] bg-no-repeat bg-contain"
           style={{ backgroundImage: `url(${RGroupImg})` }}
         ></div>
 
-        <div className="relative flex justify-center items-center m-auto">
-          <div className="flex flex-col justify-center items-center">
+
+        <div className="relative flex justify-center items-center m-auto h-full">
+
+          <div className="flex flex-col h-full">
+            <div className="flex justify-center items-center bg-white p-4 m-6 w-fit rounded-xl ">
+
+              <ButtonAccount />
+            </div>
+            <div className="flex flex-col  h-full justify-center items-center">
             <p className="text-zinc-300 font-thin text-[24px]">Welcome to</p>
             <img
               src={AnythingLLMLogo}
@@ -33,6 +44,7 @@ export default function OnboardingHome() {
             >
               Get started
             </button>
+          </div>
           </div>
         </div>
       </div>
