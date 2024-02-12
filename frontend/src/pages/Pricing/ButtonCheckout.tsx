@@ -43,7 +43,7 @@ const ButtonCheckout = ({
 
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/stripe/create-checkout",
+        "https://askagi.com/api/stripe/create-checkout",
         {
           priceId,
           successUrl: window.location.href,
