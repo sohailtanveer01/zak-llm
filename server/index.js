@@ -45,15 +45,7 @@ systemEndpoints(apiRouter);
 
 
 
-//testing
-apiRouter.post("/hello", (request, response, next) => {
-  const { name } = request.body;
-  if (name) {
-    response.json({ message: `Hi ${process.env.STRIPE_WEBHOOK_SECRET}`,  });
-  } else {
-    response.status(400).json({ error: "Name is required" });
-  }
-});
+
 
 //stripe testing
 
@@ -63,22 +55,7 @@ apiRouter.post('/stripe/create-checkout', async (req, res) => {
   
   
   try {
-    // const cookieStore = req.cookies;
-    // const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
-
-    // const {
-    //   data: { session },
-    // } = await supabase.auth.getSession();
-
-    // console.log("session", session);
-
-    // User who are not logged in can't make a purchase
-    // if (!session) {
-    //   return NextResponse.json(
-    //     { error: "You must be logged in to make a purchase." },
-    //     { status: 401 }
-    //   );
-    // }
+ 
 
 
     const Stripesession = await stripe.checkout.sessions.create({

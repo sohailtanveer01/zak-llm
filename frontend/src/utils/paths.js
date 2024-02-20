@@ -2,7 +2,7 @@ import { API_BASE } from "./constants";
 
 export default {
   home: () => {
-    return "/";
+    return "/myhome";
   },
   login: () => {
     return "/login";

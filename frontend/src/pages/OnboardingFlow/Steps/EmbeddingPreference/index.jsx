@@ -16,7 +16,7 @@ import { useNavigate } from "react-router-dom";
 
 const TITLE = "Embedding Preference";
 const DESCRIPTION =
-  "AnythingLLM can work with many embedding models. This will be the model which turns documents into vectors.";
+  "AskAGI can work with many embedding models. This will be the model which turns documents into vectors.";
 
 export default function EmbeddingPreference({
   setHeader,
@@ -42,12 +42,12 @@ export default function EmbeddingPreference({
 
   const EMBEDDERS = [
     {
-      name: "AnythingLLM Embedder",
+      name: "AskAGI-LLM Embedder",
       value: "native",
       logo: AnythingLLMIcon,
       options: <NativeEmbeddingOptions settings={settings} />,
       description:
-        "Use the built-in embedding engine for AnythingLLM. Zero setup!",
+        "Use the built-in embedding engine for AskAGI. Zero setup!",
     },
     {
       name: "OpenAI",

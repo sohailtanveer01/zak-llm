@@ -82,7 +82,7 @@ export default function GeneralEmbeddingPreference() {
       logo: AnythingLLMIcon,
       options: <NativeEmbeddingOptions settings={settings} />,
       description:
-        "Use the built-in embedding engine for AnythingLLM. Zero setup!",
+        "Use the built-in embedding engine for AskAGI. Zero setup!",
     },
     {
       name: "OpenAI",

@@ -27,14 +27,14 @@ const config = {
         //  REQUIRED - Name of the plan, displayed on the pricing page
         name: "Starter",
         // A friendly description of the plan, displayed on the pricing page. Tip: explain why this plan and not others
-        description: "A fully private instance of AnythingLLM. No limits on chats, documents, or users.",
+        description: "A fully private instance of AskAgi. No limits on chats, documents, or users.",
         // The price you want to display, the one user will be charged on Stripe.
         price: 25,
         // If you have an anchor price (i.e. $29) that you want to display crossed out, put it here. Otherwise, leave it empty
         // priceAnchor: 149,
         features: [
           {
-            name: "anythingllm",
+            name: "AskAgi",
           },
           { name: "4 GB of storage" },
           { name: "Baseline Performance" },
@@ -50,12 +50,12 @@ const config = {
         // This plan will look different on the pricing page, it will be highlighted. You can only have one plan with isFeatured: true
         isFeatured: true,
         name: "Professional",
-        description: "Private instance of AnythingLLM with even more storage and speed",
+        description: "Private instance of AskAgi with even more storage and speed",
         price: 99,
         // priceAnchor: 299,
         features: [
           {
-            name: "anythingllm",
+            name: "AskAgi",
           },
           { name: "User oauth" },
           { name: "Database" },
@@ -77,7 +77,7 @@ const config = {
         // priceAnchor: 299,
         features: [
           {
-            name: "anythingllm",
+            name: "AskAgi",
           },
           { name: "User oauth" },
           { name: "Database" },

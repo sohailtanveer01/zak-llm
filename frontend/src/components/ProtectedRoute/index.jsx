@@ -11,7 +11,7 @@ const ProtectedRoute = ({ children }) => {
             const { data, error } = await supabase.auth.getUser();
 
             if (!data || error) {
-                navigate("/landing");
+                navigate("/");
                 return;
             }
 

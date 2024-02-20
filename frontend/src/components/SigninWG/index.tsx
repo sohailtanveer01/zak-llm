@@ -70,11 +70,11 @@ export default function SigninWG() {
             </>) : (<>
 
                     <button
-                        className="btn btn-outline btn-accent"
+                        className="bg-white border py-2 w-full rounded-xl mt-5 flex justify-center items-center text-sm hover:scale-105 duration-300 text-[#002D74]"
                         onClick={handleSignup}
                         disabled={isLoading}
                     >
-                        <div className="text-lg rounded-box">Sign-in</div>
+                        <div className="text-lg rounded-box mr-2">Sign-in with</div>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="w-6 h-6"

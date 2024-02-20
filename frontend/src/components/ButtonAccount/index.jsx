@@ -17,7 +17,7 @@ const ButtonAccount = () => {
 
     const handleSignOut = async () => {
         await supabase.auth.signOut();
-        window.location.href = "/landing";
+        window.location.href = "/home";
     };
 
     const toggleDropdown = () => setIsOpen(!isOpen); // Function to toggle dropdown

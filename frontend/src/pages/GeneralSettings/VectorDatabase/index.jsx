@@ -186,7 +186,7 @@ export default function GeneralVectorDatabase() {
                 </div>
                 <p className="text-sm font-base text-white text-opacity-60">
                   These are the credentials and settings for how your
-                  AnythingLLM instance will function. It's important these keys
+                  AskAgi instance will function. It's important these keys
                   are current and correct.
                 </p>
               </div>

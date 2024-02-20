@@ -15,7 +15,7 @@ import { supabase } from "../../utils/supabaseClient";
 const ButtonCheckout = ({
   priceId,
   user,
-  mode = "payment",
+  mode = "subscription",
 }: {
   priceId: string;
   user: any; 
@@ -43,7 +43,7 @@ const ButtonCheckout = ({
 
     try {
       const response = await axios.post(
-        "https://askagi.com/api/stripe/create-checkout",
+        "http://app.askagi.com:3001/api/stripe/create-checkout",
         {
           priceId,
           successUrl: window.location.href,

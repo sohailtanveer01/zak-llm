@@ -28,7 +28,7 @@ import TogetherAiOptions from "@/components/LLMSelection/TogetherAiOptions";
 
 const TITLE = "LLM Preference";
 const DESCRIPTION =
-  "AnythingLLM can work with many LLM providers. This will be the service which handles chatting.";
+  "AskAGI can work with many LLM providers. This will be the service which handles chatting.";
 
 export default function LLMPreference({
   setHeader,
@@ -124,7 +124,7 @@ export default function LLMPreference({
       logo: AnythingLLMIcon,
       options: <NativeLLMOptions settings={settings} />,
       description:
-        "Use a downloaded custom Llama model for chatting on this AnythingLLM instance.",
+        "Use a downloaded custom Llama model for chatting on this AskAGI instance.",
     },
   ];
 
@@ -169,6 +169,8 @@ export default function LLMPreference({
   }, [searchQuery, selectedLLM]);
 
   return (
+   
+
     <div>
       <form ref={formRef} onSubmit={handleSubmit} className="w-full">
         <div className="w-full relative border-slate-300/40 shadow border-2 rounded-lg text-white">

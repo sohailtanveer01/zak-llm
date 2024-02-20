@@ -15,7 +15,7 @@ export default function Dashboard() {
                // Redirect to '/landing' page
                toast.error("You are not logged in");
                
-               history("/landing")
+               history("/")
           return;
           }
 
@@ -35,7 +35,7 @@ export default function Dashboard() {
 
           const hasAccess = profilesData[0]?.has_access;
           console.log("Has access:", hasAccess);
-          if(hasAccess==false){
+          if(hasAccess==false || hasAccess==undefined){
               // Redirect to '/pricing' page
           history("/pricing");
           }

@@ -9,20 +9,22 @@ import FeaturesSection from "@/components/Features";
 import MoreFeatures from "@/components/MoreFeatures";
 import FAQ from "@/components/Faq";
 import Footer from "@/components/Footer";
+import SignInComponent from "../Signin";
 
 
 export default function Landing() {
   
   return (
     <>
-    <main className="p-8 md:p-24" style={{ background: "linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%)" }}>
+    {/* <main className="p-8 md:p-24" style={{ background: "linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%)" }}>
      <Navbar />
       <Hero/>
     </main>
     <FeaturesSection />
     <MoreFeatures />
     <FAQ />
-    <Footer />
+    <Footer /> */}
+    <SignInComponent />
     </>
   );
 }

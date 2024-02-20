@@ -19,7 +19,7 @@ const MoreFeatures = () => {
 
                         <FeatureBlock 
                             title="Privacy"
-                            description="Your data is important, and we don’t need it. AnythingLLM allows you to run everything privately – ensuring no data leaves your instance."
+                            description="Your data is important, and we don’t need it. AskAGI allows you to run everything privately – ensuring no data leaves your instance."
                         >
                         <img src="/privacy.png" alt="Shoes" />
                         </FeatureBlock>
@@ -27,7 +27,7 @@ const MoreFeatures = () => {
                     <FeatureBlock
                         title="Full third-party control"
                         description="You have the freedom to choose your providers! Pick any vector database you’d like to use. 
-                    AnythingLLM also supports all open-source and enterprise hosted models for LLMs"
+                    AskAGI also supports all open-source and enterprise hosted models for LLMs"
                     >
                         {/* Icons or any other content can go here */}
                         <img src="/third-party.png" alt="Screenshot" className="rounded-lg shadow-md" />

@@ -10,13 +10,15 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Login from "@/pages/Login";
 import OnboardingFlow from "@/pages/OnboardingFlow";
-import { Navigate } from 'react-router-dom';
 
 import { PfpProvider } from "./PfpContext";
 import { LogoProvider } from "./LogoContext";
 import Pricing from "./pages/Pricing";
 import Landing from "./pages/Landing";
 import Dashboard from "./pages/Dashboard";
+import SignupWE from "./components/SignupWE";
+import ForgotPassword from "./pages/Forgot";
+import ResetPassword from "./pages/Reset";
 
 const Main = lazy(() => import("@/pages/Main"));
 const InvitePage = lazy(() => import("@/pages/Invite"));
@@ -54,14 +56,17 @@ export default function App() {
         <LogoProvider>
           <PfpProvider>
             <Routes>
-              {/* <Route path="/" element={<PrivateRoute Component={Main} />} /> */}
-              <Route path="/" element={<Navigate to="/landing" replace />} />
+              <Route path="/myhome" element={<PrivateRoute Component={Main} />} />
+              {/* <Route path="/" element={<Navigate to="/landing" replace />} /> */}
 
-              <Route path="/landing" element={<Landing />} />
+              <Route path="/" element={<Landing />} />
 
               <Route path="/main" element={<PrivateRoute Component={Main} />} />
               <Route path="/pricing" element={<Pricing />} />
+              <Route path="/forgot" element={<ForgotPassword />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<SignupWE />} />
+              <Route path="/reset" element={<ResetPassword />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route
                 path="/workspace/:slug"
