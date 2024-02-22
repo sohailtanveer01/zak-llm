@@ -7,6 +7,8 @@ import React from "react";
 import axios from "axios";
 import { useEffect } from "react";
 import { supabase } from "../../utils/supabaseClient";
+import { useNavigate } from "react-router-dom";
+
 
 // This component is used to create Stripe Checkout Sessions
 // It calls the /api/stripe/create-checkout route with the priceId, successUrl and cancelUrl
@@ -24,6 +26,7 @@ const ButtonCheckout = ({
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const [fuser, setUser] = useState(null);
+  const history = useNavigate()
   useEffect(() => {
       const getUser = async () => {
           const { data } = await supabase.auth.getUser();
@@ -37,16 +40,17 @@ const ButtonCheckout = ({
   const handlePayment = async () => {
     setIsLoading(true);
     if(fuser == null){
-      alert("You must be signed in to make a purchase");
-      return;
+     history('/');
+     return
     }
 
     try {
       const response = await axios.post(
-        "http://app.askagi.com:3001/api/stripe/create-checkout",
+        "/api/stripe/create-checkout",
         {
           priceId,
-          successUrl: window.location.href,
+          
+          successUrl:`${window.location.origin}/onboarding`,
           cancelUrl: window.location.href,
           mode,
           user,

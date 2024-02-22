@@ -19,8 +19,9 @@ const { extensionEndpoints } = require("./endpoints/extensions");
 const { bootHTTP, bootSSL } = require("./utils/boot");
 const {findCheckoutSession} = require("./utils/Stripe/index");
 const { SupabaseClient } = require("@supabase/supabase-js");
+
 const Stripe = require('stripe');
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+const stripe = new Stripe(STRIPE_SECRET_KEY);
 const { createClient } = require("@supabase/supabase-js");
 const cookieParser = require('cookie-parser');
 
@@ -91,7 +92,7 @@ apiRouter.post("/webhook/stripe", async (request, response) => {
   try {
     const event = request.body;
 
-    const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
+    const supabase = createClient(NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY);
 
 
 

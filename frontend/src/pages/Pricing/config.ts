@@ -23,7 +23,7 @@ const config = {
         priceId:
           process.env.NODE_ENV === "development"
             ? "price_1OlgKjSFOJuxojaiyBfmrG3d"
-            : "price_456",
+            : "price_1OlgKjSFOJuxojaiyBfmrG3d",
         //  REQUIRED - Name of the plan, displayed on the pricing page
         name: "Starter",
         // A friendly description of the plan, displayed on the pricing page. Tip: explain why this plan and not others
@@ -52,6 +52,78 @@ const config = {
         name: "Professional",
         description: "Private instance of AskAgi with even more storage and speed",
         price: 6,
+        // priceAnchor: 299,
+        features: [
+          {
+            name: "AskAgi",
+          },
+          { name: "User oauth" },
+          { name: "Database" },
+          { name: "Emails" },
+          { name: "1 year of updates" },
+          { name: "24/7 support" },
+        ],
+      },
+      {
+        priceId:
+          process.env.NODE_ENV === "development"
+            ? "price_1ObCVfSFOJuxojaiVXuVjrBb"
+            : "price_456",
+        // This plan will look different on the pricing page, it will be highlighted. You can only have one plan with isFeatured: true
+        isFeatured: true,
+        name: "Enterprise",
+        description: "White-glove premium service package with on-premise support and installation.",
+        // price: 149,
+        showContactForm: true,
+        // priceAnchor: 299,
+        features: [
+          {
+            name: "AskAgi",
+          },
+          { name: "User oauth" },
+          { name: "Database" },
+          { name: "Emails" },
+          { name: "1 year of updates" },
+          { name: "24/7 support" },
+        ],
+      },
+    ],
+
+    yearlyplans: [
+      {
+        // REQUIRED — we use this to find the plan in the webhook (for instance if you want to update the user's credits based on the plan)
+        priceId:
+          process.env.NODE_ENV === "development"
+            ? "price_1OmMpTSFOJuxojaiGFlNHO5Z"
+            : "price_1OmMpTSFOJuxojaiGFlNHO5Z",
+        //  REQUIRED - Name of the plan, displayed on the pricing page
+        name: "Starter",
+        // A friendly description of the plan, displayed on the pricing page. Tip: explain why this plan and not others
+        description: "A fully private instance of AskAgi. No limits on chats, documents, or users.",
+        // The price you want to display, the one user will be charged on Stripe.
+        price: 48,
+        // If you have an anchor price (i.e. $29) that you want to display crossed out, put it here. Otherwise, leave it empty
+        // priceAnchor: 149,
+        features: [
+          {
+            name: "Zakllm",
+          },
+          { name: "4 GB of storage" },
+          { name: "Baseline Performance" },
+          { name: "Included vector Database" },
+          { name: "No dedicated support" },
+        ],
+      },
+      {
+        priceId:
+          process.env.NODE_ENV === "development"
+            ? "price_1OmMtoSFOJuxojaiZQua6FwZ"
+            : "price_1OmMtoSFOJuxojaiZQua6FwZ",
+        // This plan will look different on the pricing page, it will be highlighted. You can only have one plan with isFeatured: true
+        isFeatured: true,
+        name: "Professional",
+        description: "Private instance of AskAgi with even more storage and speed",
+        price: 72,
         // priceAnchor: 299,
         features: [
           {

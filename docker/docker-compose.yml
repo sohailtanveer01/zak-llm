@@ -10,6 +10,8 @@ services:
   anything-llm:
     container_name: anything-llm
     image: sohailtanveer:new
+    environment:
+      - STRIPE_SECRET_KEY=sk_test_51LsUcmSFOJuxojaiebwJDXaPFXUUZQNU5VVRfAa0UaYd7cjWuRDkZpaG9Nbsl4bh8NsQfeYeZxd15Ea6OuYbP5E800GiRNyAMW
     build:
       context: ../.
       dockerfile: ./docker/Dockerfile
